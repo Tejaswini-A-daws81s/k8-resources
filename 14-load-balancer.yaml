@@ -1,0 +1,14 @@
+apiVersion: V1
+kind: Service
+metadata:
+ name: nginx
+spec:
+ selectors: 
+  project: expense
+  module: backend
+  environment: dev
+ ports:
+  - name: nginx-load-balancer
+    prototype: TCP
+    port: 80
+    targetPort: 80
