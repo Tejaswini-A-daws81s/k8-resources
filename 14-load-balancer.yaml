@@ -11,6 +11,6 @@ spec:
   environment: dev
  ports:
   - name: nginx-load-balancer
-    prototype: TCP
+    protocol: TCP
     port: 80
     targetPort: 80
